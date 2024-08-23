@@ -1,0 +1,13 @@
+.card:hover {
+  transition: transform 0.2s;
+  transform: scale(0.975);
+}
+
+.card-button-icon {
+  color: #D50000;
+}
+
+.card-icon {
+  margin-left: 20px;
+  height: 60px;
+}
