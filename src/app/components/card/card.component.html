@@ -1,0 +1,22 @@
+<mat-card appearance="outlined" class="card">
+  <mat-card-header>
+    <mat-card-title-group>
+      <mat-card-title><a href="">{{icon.asset_id}}</a></mat-card-title>
+      <mat-card-subtitle>
+        @if (this.isSaved) {
+        <button mat-icon-button class="saved-button" (click)="handleUnsave()">
+          <mat-icon class="card-button-icon">favorite</mat-icon>
+        </button>
+        } @else {
+        <button mat-icon-button class="save-button" (click)="handleSave()">
+          <mat-icon>favorite_outline</mat-icon>
+        </button>
+        }
+        <a href="" mat-icon-button>
+          <mat-icon>query_stats</mat-icon>
+        </a>
+      </mat-card-subtitle>
+      <a href=""><img [src]="icon.url" alt="Icon" class="card-icon" /></a>
+    </mat-card-title-group>
+  </mat-card-header>
+</mat-card>
