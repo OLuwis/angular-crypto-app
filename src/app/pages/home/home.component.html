@@ -1,0 +1,46 @@
+<section class="saved-section">
+  @if (saved_icons.length > 0) {
+  <h2>Saved:</h2>
+  <mat-grid-list [cols]="this.commonService.getColumnsValue()" rowHeight="105" gutterSize="15">
+    @for (icon of saved_icons; track icon.asset_id) {
+    <mat-grid-tile class="grid-tile">
+      <app-card [icon]="icon" />
+    </mat-grid-tile>
+    }
+  </mat-grid-list>
+  }
+</section>
+<section class="all-section">
+  <h2>All:</h2>
+  <div class="controls">
+    <mat-form-field class="filter-input">
+      <mat-label>Filter</mat-label>
+      <input type="search" matInput [formControl]="filter" />
+    </mat-form-field>
+    @if (!filter.value) {
+    <mat-paginator (page)="handlePageEvent($event)" [length]="this.cryptoService.getIconsValue().length"
+      [pageSize]="this.commonService.getPageSizeValue()" [pageSizeOptions]="[25, 50, 75, 100]" [pageIndex]="page_index">
+    </mat-paginator>
+    } @else {
+    <mat-paginator (page)="handleFilterPageEvent($event)" [length]="this.filterService.getFilteredIconsValue().length"
+      [pageSize]="this.commonService.getPageSizeValue()" [pageSizeOptions]="[25, 50, 75, 100]" [pageIndex]="page_index">
+    </mat-paginator>
+    }
+  </div>
+  <mat-grid-list [cols]="this.commonService.getColumnsValue()" rowHeight="100" gutterSize="15">
+    @if (!filter.value) {
+    @for (icon of this.cryptoService.getPaginatedIconsValue()[page_index]; track icon.asset_id) {
+    <mat-grid-tile class="grid-tile">
+      <app-card [icon]="icon" />
+    </mat-grid-tile>
+    }
+    } @else {
+    @for (icon of this.filterService.getPaginatedFilteredIconsValue()[page_index]; track
+    icon.asset_id) {
+    <mat-grid-tile class="grid-tile">
+      <app-card [icon]="icon" />
+    </mat-grid-tile>
+    }
+    }
+  </mat-grid-list>
+</section>
