@@ -1,46 +1,11 @@
 <mat-toolbar class="app-toolbar">
   <header class="app-header">
     <a href="/" mat-button>
-      <mat-icon svgIcon="logo" style="display: flex; align-items: center;"></mat-icon>
+      <mat-icon svgIcon="logo" class="logo-icon"></mat-icon>
       <span>CryptoApp</span>
     </a>
   </header>
 </mat-toolbar>
 <main class="app-body app-container">
-  <section style="margin-bottom: 8px;">
-    <h2 style="margin: 0; margin-bottom: 8px; font-weight: normal;">Saved:</h2>
-    <mat-grid-list [cols]="this.columns" rowHeight="105">
-      <mat-grid-tile class="grid-tile">
-        <app-card />
-      </mat-grid-tile>
-      <mat-grid-tile>2</mat-grid-tile>
-    </mat-grid-list>
-  </section>
-  <section>
-    <h2 style="margin: 0; margin-bottom: 12px; font-weight: normal;">All:</h2>
-    <mat-form-field style="margin-bottom: -8px; display: block;">
-      <mat-label>Search</mat-label>
-      <input type="search" matInput />
-    </mat-form-field>
-    <mat-grid-list [cols]="this.columns" rowHeight="105">
-      <mat-grid-tile class="grid-tile">
-        <app-card />
-      </mat-grid-tile>
-      <mat-grid-tile>2</mat-grid-tile>
-      <mat-grid-tile>3</mat-grid-tile>
-      <mat-grid-tile>4</mat-grid-tile>
-      <mat-grid-tile>5</mat-grid-tile>
-      <mat-grid-tile>6</mat-grid-tile>
-      <mat-grid-tile>7</mat-grid-tile>
-      <mat-grid-tile>8</mat-grid-tile>
-      <mat-grid-tile>9</mat-grid-tile>
-      <mat-grid-tile>10</mat-grid-tile>
-      <mat-grid-tile>11</mat-grid-tile>
-      <mat-grid-tile>12</mat-grid-tile>
-      <mat-grid-tile>13</mat-grid-tile>
-      <mat-grid-tile>14</mat-grid-tile>
-      <mat-grid-tile>15</mat-grid-tile>
-      <mat-grid-tile>16</mat-grid-tile>
-    </mat-grid-list>
-  </section>
+  <router-outlet />
 </main>
