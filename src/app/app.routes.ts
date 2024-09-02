@@ -4,5 +4,5 @@ import { MetricsComponent } from './pages/metrics/metrics.component';
 
 export const routes: Routes = [
   { path: "", component: HomeComponent },
-  { path: "/metrics/*", component: MetricsComponent }
+  { path: "/metrics/:asset", component: MetricsComponent }
 ];
