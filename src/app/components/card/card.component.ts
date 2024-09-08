@@ -4,11 +4,13 @@ import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { Icon } from '../../types/icon';
 import { CommonService } from '../../services/common.service';
+import { RouterLink, RouterLinkActive } from '@angular/router';
+import { LowerCasePipe } from '@angular/common';
 
 @Component({
   selector: 'app-card',
   standalone: true,
-  imports: [MatCardModule, MatIconModule, MatButtonModule],
+  imports: [LowerCasePipe, RouterLink, MatCardModule, MatIconModule, MatButtonModule],
   templateUrl: './card.component.html',
   styleUrl: './card.component.scss'
 })
