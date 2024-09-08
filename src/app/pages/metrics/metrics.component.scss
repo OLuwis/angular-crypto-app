@@ -1,0 +1,35 @@
+.charts-grid {
+  display: grid;
+  width: 100%;
+  padding-top: 13px;
+  row-gap: 13px;
+}
+
+.card {
+  padding-bottom: 13px;
+  margin-bottom: 5px;
+  border: none !important;
+}
+
+.icon {
+  margin-left: 20px;
+  height: 50px;
+}
+
+@media (max-width: 600px) {
+  .charts-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (min-width: 600px) and (max-width: 960px) {
+  .charts-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 960px) {
+  .charts-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

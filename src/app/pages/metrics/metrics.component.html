@@ -1,1 +1,18 @@
-<p>metrics works!</p>
+<mat-card appearance="outlined" class="card">
+  <mat-card-header>
+    <mat-card-title-group>
+      <mat-card-title>BTC / Bitcoin</mat-card-title>
+      <mat-card-subtitle>328.611,64 USD / +3.805,05 (1,17%) today</mat-card-subtitle>
+      <img
+        src="https://s3.eu-central-1.amazonaws.com/bbxt-static-icons/type-id/png_64/4caf2b16a0174e26a3482cea69c34cba.png"
+        class="icon">
+    </mat-card-title-group>
+  </mat-card-header>
+</mat-card>
+<app-chart id="chart-0" title="1 day" [labels]="['00:00', '06:00', '12:00', '18:00', '00:00']"></app-chart>
+<div class="charts-grid" #grid>
+  <app-chart id="chart-1" title="1 week" [labels]="['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']"></app-chart>
+  <app-chart id="chart-2" title="1 month" [labels]="['Q1', 'Q2', 'Q3', 'Q4']"></app-chart>
+  <app-chart id="chart-3" title="1 year"
+    [labels]="['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']"></app-chart>
+</div>
