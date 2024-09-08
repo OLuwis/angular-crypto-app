@@ -3,6 +3,7 @@ import { Injectable } from "@angular/core";
 import { Icon } from "../types/icon";
 import { BehaviorSubject, Observable } from "rxjs";
 import icons from "../utils/data.json"
+import { Asset } from "../types/asset";
 
 @Injectable({
   providedIn: "root"
