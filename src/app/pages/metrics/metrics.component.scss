@@ -1,8 +1,9 @@
 .charts-grid {
   display: grid;
   width: 100%;
+  grid-template-columns: repeat(1, 1fr);
   padding-top: 13px;
-  row-gap: 13px;
+  row-gap: 16px;
 }
 
 .card {
@@ -14,22 +15,4 @@
 .icon {
   margin-left: 20px;
   height: 50px;
-}
-
-@media (max-width: 600px) {
-  .charts-grid {
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
-
-@media (min-width: 600px) and (max-width: 960px) {
-  .charts-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 960px) {
-  .charts-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
 }
