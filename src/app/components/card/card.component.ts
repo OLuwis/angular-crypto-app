@@ -1,16 +1,15 @@
-import { Component, Input, afterNextRender } from '@angular/core';
+import { Component, Input, afterRender } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { Icon } from '../../types/icon';
 import { CommonService } from '../../services/common.service';
-import { RouterLink, RouterLinkActive } from '@angular/router';
 import { LowerCasePipe } from '@angular/common';
 
 @Component({
   selector: 'app-card',
   standalone: true,
-  imports: [LowerCasePipe, RouterLink, MatCardModule, MatIconModule, MatButtonModule],
+  imports: [LowerCasePipe, MatCardModule, MatIconModule, MatButtonModule],
   templateUrl: './card.component.html',
   styleUrl: './card.component.scss'
 })
@@ -20,13 +19,13 @@ export class CardComponent {
 
   constructor(public commonService: CommonService) {
     this.commonService.getSaved().subscribe(saved => {
-      if (saved.find(value => value === this.icon.asset_id)) {
+      if (this.icon && saved.find(value => value === this.icon.asset_id)) {
         return this.isSaved = true
       }
       return this.isSaved = false
     })
 
-    afterNextRender(() => commonService.loadLocalStorage())
+    afterRender(() => commonService.loadLocalStorage())
   }
 
   handleSave() {
