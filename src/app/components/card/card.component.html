@@ -12,11 +12,11 @@
           <mat-icon>favorite_outline</mat-icon>
         </button>
         }
-        <a [routerLink]="'/'+this.icon.asset_id | lowercase" mat-icon-button>
-          <mat-icon>query_stats</mat-icon>
+        <a [href]="'/'+this.icon.asset_id | lowercase" mat-icon-button>
+          <mat-icon>link</mat-icon>
         </a>
       </mat-card-subtitle>
-      <a [routerLink]="'/'+this.icon.asset_id | lowercase"><img [src]="icon.url" alt="Icon" class="card-icon" /></a>
+      <a [href]="'/'+this.icon.asset_id | lowercase"><img [src]="icon.url" alt="Icon" class="card-icon" /></a>
     </mat-card-title-group>
   </mat-card-header>
 </mat-card>
