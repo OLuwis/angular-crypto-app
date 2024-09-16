@@ -3,6 +3,6 @@ import { Observable } from "rxjs";
 import { environment } from "../../environments/environment";
 
 export function HeaderInterceptor(req: HttpRequest<unknown>, next: HttpHandlerFn): Observable<HttpEvent<unknown>> {
-  const newReq = req.clone({ headers: req.headers.append("Authorization", environment.COINAPI_KEY) });
+  const newReq = req.clone({ headers: req.headers.append("Authorization", environment.API_KEY) });
   return next(newReq)
 }
