@@ -18,7 +18,7 @@
       <input type="search" matInput [formControl]="filter" />
     </mat-form-field>
     @if (!filter.value) {
-    <mat-paginator (page)="handlePageEvent($event)" [length]="this.cryptoService.getIconsValue().length"
+    <mat-paginator (page)="handlePageEvent($event)" [length]="this.cryptoService.getIcons().length"
       [pageSize]="this.commonService.getPageSizeValue()" [pageSizeOptions]="[25, 50, 75, 100]" [pageIndex]="page_index">
     </mat-paginator>
     } @else {
@@ -29,7 +29,7 @@
   </div>
   <mat-grid-list [cols]="this.commonService.getColumnsValue()" rowHeight="100" gutterSize="15">
     @if (!filter.value) {
-    @for (icon of this.cryptoService.getPaginatedIconsValue()[page_index]; track icon.asset_id) {
+    @for (icon of this.cryptoService.getPaginatedIcons()[page_index]; track icon.asset_id) {
     <mat-grid-tile class="grid-tile">
       <app-card [icon]="icon" />
     </mat-grid-tile>
