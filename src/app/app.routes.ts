@@ -3,6 +3,6 @@ import { HomeComponent } from './pages/home/home.component';
 import { MetricsComponent } from './pages/metrics/metrics.component';
 
 export const routes: Routes = [
-  { path: ":asset", component: MetricsComponent },
-  { path: "", component: HomeComponent }
+  { path: ":asset_id", component: MetricsComponent },
+  { path: "", component: HomeComponent, title: "CryptoApp - Home" }
 ];
