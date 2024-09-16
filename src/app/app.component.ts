@@ -1,5 +1,5 @@
 import { Component, afterNextRender } from '@angular/core';
-import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import { RouterOutlet } from '@angular/router';
 import { MatToolbarModule } from "@angular/material/toolbar"
 import { MatIconModule, MatIconRegistry } from "@angular/material/icon"
 import { BreakpointObserver, Breakpoints } from "@angular/cdk/layout"
@@ -12,7 +12,7 @@ import { MatButtonModule } from '@angular/material/button';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [AsyncPipe, RouterLink, RouterOutlet, HomeComponent, MatToolbarModule, MatIconModule, MatButtonModule],
+  imports: [AsyncPipe, RouterOutlet, HomeComponent, MatToolbarModule, MatIconModule, MatButtonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
