@@ -4,17 +4,15 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { ChartComponent } from '../../components/chart/chart.component';
 import { CommonService } from '../../services/common.service';
 import { CryptoService } from '../../services/crypto.service';
-import { CurrencyPipe, TitleCasePipe, UpperCasePipe } from '@angular/common';
+import { TitleCasePipe, UpperCasePipe } from '@angular/common';
 import { MetricService } from '../../services/metric.service';
-import { NgxChartsModule } from "@swimlane/ngx-charts"
-import { BaseChartDirective } from "ng2-charts"
 import { ChartData } from '../../types/chartData';
 import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-metrics',
   standalone: true,
-  imports: [UpperCasePipe, CurrencyPipe, TitleCasePipe, BaseChartDirective, MatCardModule, MatGridListModule, ChartComponent, NgxChartsModule],
+  imports: [UpperCasePipe, TitleCasePipe, MatCardModule, MatGridListModule, ChartComponent],
   templateUrl: './metrics.component.html',
   styleUrl: './metrics.component.scss'
 })
