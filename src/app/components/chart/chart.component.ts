@@ -1,5 +1,6 @@
 import { Component, ElementRef, Input, ViewChild, afterRender } from '@angular/core';
 import { Chart } from "chart.js/auto"
+import "chartjs-adapter-date-fns"
 
 @Component({
   selector: 'app-chart',
@@ -13,30 +14,29 @@ export class ChartComponent {
   @Input() title: string = "";
   @Input() labels: string[] = [];
   @Input() data: number[] = [];
+  @Input() timeUnit: false | "millisecond" | "second" | "minute" | "hour" | "day" | "week" | "month" | "quarter" | "year" = false;
+  @Input() tooltipFormat: string = ""
   chart!: Chart;
 
   constructor() {
     afterRender(() => {
       this.chart = new Chart(this.element.nativeElement, {
-        type: 'line',
+        type: "line",
         data: {
           labels: this.labels,
           datasets: [
             {
-              data: [20, 40, 10, 50, 90, 80, 60, 0, 100, 70, 120, 90],
-              fill: "start"
+              data: this.data,
+              fill: "start",
             }
           ]
         },
         options: {
           maintainAspectRatio: false,
           plugins: {
-            filler: {
-              propagate: false,
-            },
             title: {
-              display: true,
-              text: this.title
+              text: this.title,
+              display: true
             },
             legend: {
               display: false
@@ -48,6 +48,28 @@ export class ChartComponent {
           elements: {
             line: {
               tension: 0.4
+            }
+          },
+          scales: {
+            x: {
+              type: "time",
+              time: {
+                unit: this.timeUnit,
+                tooltipFormat: this.tooltipFormat,
+                displayFormats: {
+                  minute: "HH:mm",
+                  hour: "HH:mm",
+                  day: "dd/MM"
+                }
+              },
+              ticks: {
+                source: "labels"
+              }
+            },
+            y: {
+              ticks: {
+                maxTicksLimit: 4
+              }
             }
           }
         },
