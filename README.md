@@ -1,27 +1,76 @@
-# CryptoApp
+<p align="center">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Angular_full_color_logo.svg" style="display:block; width: 50%;">
+  <h3 align="center">
+    Angular Crypto App
+  </h3>
+</p>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.2.
+### [BR]
 
-## Development server
+### Introdução
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Este projeto foi feito para visualizar dados sobre os preços de diversos ativos financeiros de crypto-moedas.
 
-## Code scaffolding
+O projeto foi feito usando Angular 18+, Angular Material Design 18+, ChartJS 4+, ExpressJS 5+ e Dotenv 16+.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+O projeto faz uso de SSR e CSR, para renderização de telas e páginas, também usa APIs do navegador para persitência de dados, e também é feito com Typescript.
 
-## Build
+### Feito com
+![Angular Badge](https://img.shields.io/badge/Angular-0F0F11?logo=angular&logoColor=fff&style=for-the-badge)
+![TypeScript Badge](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=fff&style=for-the-badge)
+![Material Design Badge](https://img.shields.io/badge/Material%20Design-757575?logo=materialdesign&logoColor=fff&style=for-the-badge)
+![Chart.js Badge](https://img.shields.io/badge/Chart.js-FF6384?logo=chartdotjs&logoColor=fff&style=for-the-badge)
+![Express Badge](https://img.shields.io/badge/Express-000?logo=express&logoColor=fff&style=for-the-badge)
+![.ENV Badge](https://img.shields.io/badge/.ENV-ECD53F?logo=dotenv&logoColor=000&style=for-the-badge)
+![HTML5 Badge](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=fff&style=for-the-badge)
+![CSS3 Badge](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=fff&style=for-the-badge)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Desenvolvimento Local
 
-## Running unit tests
+1. Clone este repositório
+```sh
+git clone https://github.com/OLuwis/angular-crypto-app.git
+```
+2. Inicie o servidor local
+```sh
+ng serve
+```
+3. Acesse o servidor no seu navegador
+```sh
+http://localhost:4200
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### [EN]
 
-## Running end-to-end tests
+### Introduction
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+This project was created to visualize data on the prices of various financial assets of cryptocurrencies.
 
-## Further help
+The project was built using Angular 18+, Angular Material Design 18+, ChartJS 4+, ExpressJS 5+, and Dotenv 16+.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+The project employs SSR and CSR for rendering screens and pages, also utilizing browser APIs for data persistence, and is developed with TypeScript.
+
+### Built with
+![Angular Badge](https://img.shields.io/badge/Angular-0F0F11?logo=angular&logoColor=fff&style=for-the-badge)
+![TypeScript Badge](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=fff&style=for-the-badge)
+![Material Design Badge](https://img.shields.io/badge/Material%20Design-757575?logo=materialdesign&logoColor=fff&style=for-the-badge)
+![Chart.js Badge](https://img.shields.io/badge/Chart.js-FF6384?logo=chartdotjs&logoColor=fff&style=for-the-badge)
+![Express Badge](https://img.shields.io/badge/Express-000?logo=express&logoColor=fff&style=for-the-badge)
+![.ENV Badge](https://img.shields.io/badge/.ENV-ECD53F?logo=dotenv&logoColor=000&style=for-the-badge)
+![HTML5 Badge](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=fff&style=for-the-badge)
+![CSS3 Badge](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=fff&style=for-the-badge)
+
+### Local Development
+
+1. Clone this repository
+```sh
+git clone https://github.com/OLuwis/angular-crypto-app.git
+```
+2. Start the local server
+```sh
+ng serve
+```
+3. Access the server in your browser
+```sh
+http://localhost:4200
+```
